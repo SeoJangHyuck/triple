@@ -3,8 +3,19 @@ import reset from 'styled-reset'
 
 const GlobalStyles = createGlobalStyle`
     ${reset};
-    body {
-      min-width: 1200px;
+    
+    html, body {
+      font-size: 14px;
+    }
+
+    strong {
+      font-weight: bold;
+    }
+    
+    .center {
+      width: 1200px;
+      margin: 0 auto;
+      overflow: auto;
     }    
 `
 
