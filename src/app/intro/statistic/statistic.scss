@@ -1,0 +1,87 @@
+@keyframes float_ani {
+  0% {
+    top: 10px;
+    opacity: 0;
+  }
+  100% {
+    top: 0px;
+    opacity: 1;
+  }
+}
+
+.statistic {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  justify-self: center;
+  justify-items: center;
+  height: 600px;
+  padding: 100px 0px;
+  box-sizing: border-box;
+
+  & > .statistic_standard {
+    position: relative;
+    width: 33.3333%;
+    padding-top: 310px;
+    box-sizing: border-box;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    font-size: 15px;
+    color: rgba(58, 58, 58, 0.7);
+    animation: float_ani 0.7s ease-in-out forwards;
+  }
+
+  & > .statistic_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 33.3333%;
+    // margin-bottom: 70px;       // .statistic_info를 상단정렬하고 싶으면 주석을 풀어주세요
+
+    & > .user_info {
+      position: relative;
+      margin-bottom: 40px;
+      font-size: 36px;
+      color: rgb(58, 58, 58);
+      opacity: 0;
+      animation: float_ani 0.7s ease-in-out 0.1s forwards;
+
+      & > p:nth-of-type(n) {
+        margin-bottom: 20px;
+      }
+      & > p:nth-last-of-type() {
+        margin-bottom: 0px;
+      }
+    }
+
+    & > .award_info {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      & > div:nth-of-type(n) {
+        position: relative;
+        width: fit-content;
+        height: 50px;
+        padding-left: 60px;
+        box-sizing: border-box;
+        background-size: contain;
+        background-position: center left;
+        background-repeat: no-repeat;
+        line-height: 22px;
+        opacity: 0;
+        animation: float_ani 0.7s ease-in-out 0.2s forwards;
+        p {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          height: 100%;
+          font-weight: bold;
+          color: rgba(58, 58, 58, 0.8);
+        }
+      }
+    }
+  }
+}

@@ -1,12 +1,10 @@
 import './intro.scss'
 import Statistic from './statistic/statistic'
 
-function Intro() {
-  return (
-    <div className="intro">
-      <Statistic />
-    </div>
-  )
-}
+const Intro = () => (
+  <div className="intro center">
+    <Statistic />
+  </div>
+)
 
 export default Intro
