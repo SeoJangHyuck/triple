@@ -12,7 +12,7 @@ export interface statisticCount {
 // 카운트 애니메이션을 위해서 특정 시간에 이벤트가 발생할수 있도록
 // time list를 만드는 함수
 // 조건: 증가속도가 확 느려지는 효과 구현 (Ease-Out)
-// 마지막 1초의 시간동안 5번의 카운트에서 delay를 100주면서 속도를 확 줄이는 형태
+// 마지막 1초의 시간 동안 5번의 카운트에서 delay 100ms를 주면서 속도를 확 줄이는 형태
 function makeTimingFunction(maxTime: number, maxCount: number) {
   const timeList: number[] = [0]
   let delay = 1

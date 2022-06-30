@@ -67,7 +67,7 @@ const GlobalStyles = createGlobalStyle`
 
 ### 2-3) SCSS
 
-- CSS를 구조화 하여 표현할 수 있어서 한눈에 스타일을 파악하기 편하여 유지보수에 용이
+- CSS를 구조화하여 표현함으로써 한눈에 스타일을 파악하기 편하여 유지 보수에 용이
 
 ---
 
@@ -75,7 +75,7 @@ const GlobalStyles = createGlobalStyle`
 
 ### 3-1) 라우팅
 
-- [app.tsx](./src/app/app.tsx) 파일내 라우팅 구현
+- [app.tsx](./src/app/app.tsx) 파일 내 라우팅 구현
 - 기본 경로와 /intro 이후 붙는 경로는 전부 Intro Component 출력
 - 그 밖에 경로에 대해서는 NotFound Component 출력
 
@@ -97,7 +97,7 @@ const App = () => (
 ### 3-2) 등장 애니메이션
 
 - [statistic.scss](./src/app//intro/statistic/statistic.scss)에서 float_ani를 통하여 애니메이션 구현
-- position: relative의 속성을 퉁하여 컨텐츠의 위치는 유지한 상태로 위치를 변화시켜 애니메이션 구현
+- position: relative의 속성을 퉁하여 컨텐츠의 공간은 유지한 상태로 위치를 변화시켜 애니메이션 구현
 
 ```scss
 @keyframes float_ani {
@@ -129,7 +129,7 @@ const App = () => (
 // 카운트 애니메이션을 위해서 특정 시간에 이벤트가 발생할수 있도록
 // time list를 만드는 함수
 // 조건: 증가속도가 확 느려지는 효과 구현 (Ease-Out)
-// 마지막 1초의 시간동안 5번의 카운트에서 delay를 100주면서 속도를 확 줄이는 형태
+// 마지막 1초의 시간 동안 5번의 카운트에서 delay 100ms를 주면서 속도를 확 줄이는 형태
 function makeTimingFunction(maxTime: number, maxCount: number) {
   const timeList: number[] = [0]
   let delay = 1
@@ -152,7 +152,7 @@ function makeTimingFunction(maxTime: number, maxCount: number) {
 // 여행자 카운트 애니메이션
   useEffect(() => {
     const timeFuncList: any[] = []  // setTimeout clear를 위해 선언
-    // delay time list를 for문을 돌면서 이벤트 발생
+    // delay time list를 forEach문을 돌면서 이벤트 발생
     makeTimingFunction(maxTime, maxCount.user).forEach((time) => {
       const timeOut = setTimeout(() => {
         setUserCount((c) => c + 1)  // 이벤트 발생
@@ -174,7 +174,7 @@ function makeTimingFunction(maxTime: number, maxCount: number) {
 
 ### 4-1) favicon
 
-- [index.html](./public/index.html) 파일내 트리플 favicon과 관련 meta 태그 작성
+- [index.html](./public/index.html) 파일 내 트리플 favicon과 관련 meta 태그 작성
 
 ### 4-2) 상단정렬
 
